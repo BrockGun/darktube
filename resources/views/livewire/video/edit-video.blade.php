@@ -1,5 +1,5 @@
 
-<div class="container">
+<div class="container" @if($video->processing_percentage < 100) wire:poll.500ms @endif>
 
     <div class="row justify-content-center">
 
