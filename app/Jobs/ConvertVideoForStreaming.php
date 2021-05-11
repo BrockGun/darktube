@@ -11,6 +11,8 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use FFMpeg;
 use FFMpeg\Format\Video\X264;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Storage;
 
 class ConvertVideoForStreaming implements ShouldQueue
 {
@@ -67,5 +69,8 @@ class ConvertVideoForStreaming implements ShouldQueue
             'processed_file' => $this->video->uid. '.m3u8',
 
         ]);
+
+        $result = Storage::disk('video-temp')->delete($this->video->path);
+        Log::info($this->video->path . ' 影片已被刪除');
     }
 }
