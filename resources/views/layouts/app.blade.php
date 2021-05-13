@@ -18,6 +18,8 @@
     <!-- material icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    @stack('custom-css')
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -99,6 +101,6 @@
             @yield('content')
         </main>
     </div>
-
+    @stack('scripts')
 </body>
 </html>
