@@ -26,6 +26,10 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- custom css -->
+    <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
+
     @livewireStyles
     @livewireScripts
 </head>
